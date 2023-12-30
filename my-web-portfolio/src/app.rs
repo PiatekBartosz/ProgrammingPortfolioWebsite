@@ -2,13 +2,12 @@ use leptos::*;
 use leptos_meta::*;
 use leptos_router::*;
 
-use crate::{
-    components::{
-        error::NotFound,
-    },
-    routes::{
-        home::HomePage,
-    }
+
+use components::{
+    error::NotFound
+};
+use routes::{
+    home::HomePage
 };
 
 #[component]
