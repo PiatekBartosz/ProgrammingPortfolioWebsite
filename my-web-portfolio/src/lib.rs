@@ -1,5 +1,9 @@
-pub mod app;
+#![allow(non_snake_case)]
 use cfg_if::cfg_if;
+
+pub mod app;
+pub mod pages;
+pub mod components;
 
 cfg_if! {
 if #[cfg(feature = "hydrate")] {

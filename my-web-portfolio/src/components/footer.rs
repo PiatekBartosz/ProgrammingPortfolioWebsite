@@ -1,13 +1,10 @@
 use leptos::*;
 
 #[component]
-pub fn Footer(cx: Scope) -> impl IntoView {
-    view! { cx,
+pub fn Footer() -> impl IntoView {
+    view! {
         <footer>
+            <p>"Made with Rust and Leptos 🦀 2024"</p>
         </footer>
     }
-
 }
-
-#[component]
-pub fn GoBack(cx Scope )
