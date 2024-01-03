@@ -5,12 +5,14 @@ use leptos::*;
 
 pub fn Home() -> impl IntoView {
     view! {
-        <body>
-        <h1>"Welcome to Leptos!"</h1>
-        <TopNav>
-        </TopNav>
+        <body class="dark">
+            <TopNav>
+            </TopNav>
+
+
+
+            <Footer>
+            </Footer>
         </body>
-        <Footer>
-        </Footer>
     }
 }

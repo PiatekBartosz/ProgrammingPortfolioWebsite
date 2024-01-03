@@ -11,12 +11,13 @@ pub fn App() -> impl IntoView {
     provide_meta_context();
 
     view! {
+        <Html lang="en"/>
         // injects a stylesheet into the document <head>
         // id=leptos means cargo-leptos will hot-reload this stylesheet
         <Stylesheet id="leptos" href="/pkg/leptos_start.css"/>
 
         // sets the document title
-        <Title text="Welcome to Leptos"/>
+        <Title text="My Web Portfolio"/>
 
         // content for this welcome page
         <Router>
