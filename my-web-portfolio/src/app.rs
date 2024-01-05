@@ -1,4 +1,5 @@
 use crate::pages::home::*;
+use crate::pages::about::*;
 use crate::components::footer::*;
 
 use leptos::*;
@@ -24,6 +25,7 @@ pub fn App() -> impl IntoView {
             <main>
                 <Routes>
                     <Route path="" view=Home/>
+                    <Route path="/about" view=About/>
                     <Route path="/*any" view=NotFound/>
                 </Routes>
             </main>
