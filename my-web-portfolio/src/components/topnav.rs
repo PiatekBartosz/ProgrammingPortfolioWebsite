@@ -51,13 +51,14 @@ pub fn TopNav() -> impl IntoView {
       <header class="text-gray-400 bg-gray-800 body-font">
          <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
             <a class="flex title-font font-medium items-center text-white mb-4 md:mb-0">
-               <span class="ml-3 text-xl cursor-pointer">"WebPortfolio"</span>
+               <span class="ml-3 text-xl cursor-pointer">"MyWebPortfolio"</span>
             </a>
             <nav class="md:ml-auto flex flex-wrap items-center cursor-pointer text-base justify-right">
-                  <a class="mr-5 hover:text-white">"First Link"</a>
-                  <a class="mr-5 hover:text-white">"Second Link"</a>
-                  <a class="mr-5 hover:text-white">"Third Link"</a>
-                  <a class="mr-5 hover:text-white">"Fourth Link"</a>
+                  <a class="mr-5 hover:text-white" href="/">"Home"</a>
+                  <a class="mr-5 hover:text-white" href="about">"About"</a>
+                  <a class="mr-5 hover:text-white" href="projects">"Projects"</a>
+                  <a class="mr-5 hover:text-white" href="dsa">"Data Structures & Algorithms"</a>
+                  <a class="mr-5 hover:text-white" href="hire">"Hire me"</a>
             </nav>
          </div>
       </header>

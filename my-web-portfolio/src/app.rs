@@ -63,6 +63,19 @@ fn NotFound() -> impl IntoView {
     }
 
     view! {
-        <h1>"Not Found"</h1>
+    <head>
+        // <meta charset="UTF-8">
+        <title>Your Page Title</title>
+    </head>
+    
+    <body class="bg-gray-900 flex flex-col min-h-screen">
+        <TopNav/>
+    
+        <section class="container pt-24 md:pt-36 mx-auto flex flex-wrap flex-col md:flex-row items-center">
+            <p class="text-black">"404 - Not Found"</p>
+        </section>
+    
+        <Footer/>
+    </body>
     }
 }
