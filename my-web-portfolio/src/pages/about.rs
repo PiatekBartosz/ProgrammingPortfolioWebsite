@@ -1,13 +1,18 @@
 use crate::components::footer::Footer;
-use crate::components::top_nav::TopNav;
+use crate::components::topnav::TopNav;
 
 use leptos::*;
+use leptos_meta::*;
 
+#[component]
 pub fn About() -> impl IntoView {
     view! {
-        <body class="dark bg-gray-600">
+        // <Html lang="en" class="h-full"/>
+        // <Title text="My Web Portfolio"/>
+        // <Meta name="description" content="My Web Portfolio"/>
+        <body>
             <TopNav/>
-                // <h1 class="text-white"> "About page" </h1>
+            <h1 class="text-white"> "About page" </h1>
             <Footer/>
         </body>
     }

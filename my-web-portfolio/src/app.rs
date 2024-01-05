@@ -1,6 +1,7 @@
 use crate::pages::home::*;
 use crate::pages::about::*;
-use crate::components::footer::*;
+use crate::components::footer::Footer;
+use crate::components::topnav::TopNav;
 
 use leptos::*;
 use leptos_meta::*;
@@ -22,13 +23,11 @@ pub fn App() -> impl IntoView {
 
         // content for this welcome page
         <Router>
-            <main>
-                <Routes>
-                    <Route path="" view=Home/>
-                    <Route path="/about" view=About/>
-                    <Route path="/*any" view=NotFound/>
-                </Routes>
-            </main>
+            <Routes>
+                <Route path="" view=Home/>
+                <Route path="/about" view=About/>
+                <Route path="/*any" view=NotFound/>
+            </Routes>
         </Router>
     }
 }
