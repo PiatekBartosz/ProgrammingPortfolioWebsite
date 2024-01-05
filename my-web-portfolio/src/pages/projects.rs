@@ -4,7 +4,7 @@ use crate::components::topnav::TopNav;
 use leptos::*;
 use leptos_meta::*;
 
-pub fn About() -> impl IntoView {
+pub fn Projects() -> impl IntoView {
 
     view! {
         <Html lang="en" class="h-full"/>
@@ -19,7 +19,7 @@ pub fn About() -> impl IntoView {
             
                 <div class="text-center py-10 px-4 sm:px-6 lg:px-8">
                     <h1 class="text-3xl font-extrabold text-white sm:text-4xl">
-                        "About me"
+                        "My Projects"
                     </h1>
                     <p class="text-white text-m text-center">
                         "TODO"

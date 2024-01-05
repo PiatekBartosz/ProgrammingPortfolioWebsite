@@ -1,5 +1,9 @@
-use crate::pages::home::*;
-use crate::pages::about::*;
+use crate::pages::home::Home;
+use crate::pages::about::About;
+use crate::pages::projects::Projects;
+use crate::pages::dsa::DSA;
+use crate::pages::hire::Hire;
+
 use crate::components::footer::Footer;
 use crate::components::topnav::TopNav;
 
@@ -26,6 +30,9 @@ pub fn App() -> impl IntoView {
             <Routes>
                 <Route path="" view=Home/>
                 <Route path="/about" view=About/>
+                <Route path="/projects" view=Projects/>
+                <Route path="/dsa" view=DSA/>
+                <Route path="/hire" view=Hire/>
                 <Route path="/*any" view=NotFound/>
             </Routes>
         </Router>
@@ -63,19 +70,32 @@ fn NotFound() -> impl IntoView {
     }
 
     view! {
-    <head>
-        // <meta charset="UTF-8">
-        <title>Your Page Title</title>
-    </head>
-    
-    <body class="bg-gray-900 flex flex-col min-h-screen">
-        <TopNav/>
-    
-        <section class="container pt-24 md:pt-36 mx-auto flex flex-wrap flex-col md:flex-row items-center">
-            <p class="text-black">"404 - Not Found"</p>
-        </section>
-    
-        <Footer/>
-    </body>
+        <Html lang="en" class="h-full"/>
+        <head>
+            <Title text="My Web Portfolio"/>
+        </head>
+
+        <body class="bg-gray-900 h-5/6">
+            <TopNav/>
+            
+            <div class="bg-gray-900 flex flex-col justify-center mx-auto w-full h-full">
+            
+                <div class="text-center py-10 px-4 sm:px-6 lg:px-8">
+                    <h1 class="text-3xl font-extrabold text-white sm:text-4xl">
+                        "404 - Not Found"
+                    </h1>
+                    <p class="text-white text-m text-center">
+                        "The page you are looking for does not exist."
+                    </p>
+                    <div class="w-1/4 mt-5 mx-auto flex flex-col justify-center gap-2 sm:flex-row sm:gap-3">
+                        <a href="/" class="mx-auto flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-700 hover:bg-blue-800 md:py-4 md:text-lg md:px-10">
+                            "Go Home"
+                        </a>
+                    </div>
+                </div>
+
+                <Footer/>
+            </div>
+        </body>
     }
 }

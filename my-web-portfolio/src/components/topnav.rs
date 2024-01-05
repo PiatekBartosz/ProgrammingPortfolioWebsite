@@ -48,9 +48,9 @@ pub fn TopNav() -> impl IntoView {
    //         </div>
    //      </div>
    //   </nav>
-      <header class="text-gray-400 bg-gray-800 body-font">
-         <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
-            <a class="flex title-font font-medium items-center text-white mb-4 md:mb-0">
+      <header class="mx-auto text-gray-400 bg-gray-800 body-font">
+         <div class="mx-auto container flex flex-wrap p-5 flex-col md:flex-row items-center">
+            <a class="mx-auto flex title-font font-medium items-center text-white mb-4 md:mb-0">
                <span class="ml-3 text-xl cursor-pointer">"MyWebPortfolio"</span>
             </a>
             <nav class="md:ml-auto flex flex-wrap items-center cursor-pointer text-base justify-right">

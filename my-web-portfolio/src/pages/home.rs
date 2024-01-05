@@ -2,18 +2,32 @@ use crate::components::footer::Footer;
 use crate::components::topnav::TopNav;
 
 use leptos::*;
+use leptos_meta::*;
 
 pub fn Home() -> impl IntoView {
-    let (count, set_count) = create_signal(0);
-    let on_click = move |_| set_count.update(|count| *count += 1);
 
     view! {
-        <body>
+        <Html lang="en" class="h-full w-full"/>
+        <head>
+            <Title text="My Web Portfolio"/>
+        </head>
+
+        <body class="bg-gray-900 h-5/6">
             <TopNav/>
-                <h1>"Home page"</h1>
-                <h1>"Welcome to Leptos!"</h1>
-                <button on:click=on_click class="btn btn-blue">"Click Me: " {count}</button>
-            <Footer/>
+            
+            <div class="bg-gray-900 flex flex-col justify-center mx-auto w-full h-full">
+            
+                <div class="text-center py-10 px-4 sm:px-6 lg:px-8">
+                    <h1 class="text-3xl font-extrabold text-white sm:text-4xl">
+                        "Home page"
+                    </h1>
+                    <p class="text-white text-m text-center">
+                        "TODO"
+                    </p>
+                </div>
+
+                <Footer/>
+            </div>
         </body>
     }
 }
