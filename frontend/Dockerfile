@@ -1,11 +1,11 @@
 FROM rust:1.80.1-slim-bookworm
 
-WORKDIR /workspaces
-COPY . .
-
 ARG USERNAME=dev
 ARG USER_UID=1000
 ARG USER_GID=$USER_UID
+
+WORKDIR /workspaces
+COPY . .
 
 # Create the user
 RUN groupadd --gid $USER_GID $USERNAME \
