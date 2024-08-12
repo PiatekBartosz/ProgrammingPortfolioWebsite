@@ -41,5 +41,4 @@ RUN . ${HOME}/.cargo/env \
     && rustup target add wasm32-unknown-unknown \
     && cargo install --locked trunk
 
-RUN sudo apt install -y npm \
-    && npx tailwindcss init
+RUN sudo apt install -y npm 
