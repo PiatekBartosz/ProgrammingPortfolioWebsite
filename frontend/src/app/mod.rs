@@ -1,10 +1,11 @@
 use yew::prelude::*;
 use yew_router::prelude::*;
 
+use crate::components::navbar::NavBar;
 use crate::pages::home::Home;
 
-#[derive(Routable, PartialEq, Eq, Clone, Debug)]
-pub enum Route {
+#[derive(Clone, Routable, PartialEq)]
+enum Route {
     #[at("/")]
     Home,
     #[not_found]
@@ -12,21 +13,21 @@ pub enum Route {
     NotFound,
 }
 
-fn switch(route: Route) -> Html {
-    match route {
+fn switch(routes: Route) -> Html {
+    match routes {
         Route::Home => {
-            html! { <Home /> }
+            html! { <h1>{ "Home" }</h1> }
         }
         Route::NotFound => html! { <h1>{ "404 - Page not found" }</h1> },
     }
 }
 
-#[function_component]
-pub fn App() -> Html {
+#[function_component(Main)]
+pub fn app() -> Html {
     html! {
-        <div>
-            <h1>{ "Welcome to My Yew App" }</h1>
-            <Home />
-        </div>
+        <BrowserRouter>
+            <NavBar />
+            <Switch<Route> render={switch} /> // <- must be child of <BrowserRouter>
+        </BrowserRouter>
     }
 }

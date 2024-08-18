@@ -1,6 +1,8 @@
-use crate::app::App;
+mod app;
+mod components;
+mod pages;
 
 fn main() {
     wasm_logger::init(wasm_logger::Config::default());
-    yew::Renderer::<App>::new().render();
+    yew::Renderer::<app::Main>::new().render();
 }

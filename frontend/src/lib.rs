@@ -1,3 +1,3 @@
 pub mod app;
+pub mod components;
 pub mod pages;
-//TODO pub mod components;
