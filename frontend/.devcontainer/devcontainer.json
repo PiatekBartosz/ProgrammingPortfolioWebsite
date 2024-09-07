@@ -4,6 +4,17 @@
     "context": "./..",
     "customizations": {
         "vscode": {
+            "settings": {
+                "terminal.integrated.defaultProfile.linux": "bash",
+                "terminal.integrated.profiles.linux": {
+                    "bash": {
+                        "path": "bash",
+                        "icon": "terminal-bash"
+                    },
+                    "zsh": {
+                        "path": "zsh"
+                    }
+            },
             "extensions": [
                 "rust-lang.rust-analyzer",
                 "matklad.rust-analyzer",

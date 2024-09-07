@@ -24,6 +24,15 @@ RUN apt-get update \
     pkg-config \
     libssh-dev
 
+# Tools
+RUN apt-get update && apt-get -y install --no-install-recommends \
+    zsh \
+    git
+
+# Oh My Zsh
+RUN sh -c "$(wget -O- https://github.com/deluan/zsh-in-docker/releases/download/v1.2.0/zsh-in-docker.sh)"
+
+
 # ********************************************************
 # * Anything else you want to do like clean up goes here *
 # ********************************************************
